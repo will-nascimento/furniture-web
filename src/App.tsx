@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ButtonLarge } from './components/ButtonLarge/ButtonLarge.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => (
+    <>
+    <ButtonLarge variation='primary' iconPosition='none' title='active button'/>
+    <div style={{height:10}}/>
+    <ButtonLarge variation='primary' iconPosition='left' title='active button'/>
+    <div style={{height:10}}/>
+    <ButtonLarge variation='ghost' outline iconPosition='none' title='active button'  />
+    <div style={{height:10}}/>
+    <ButtonLarge variation='ghost' iconPosition='none' title='active button'/>
+    <div style={{height:10}}/>
+    <div style={{width:100, height:100, backgroundColor:'black'}}/>
+    </>
+);
 
 export default App;
+ 
