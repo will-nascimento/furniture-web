@@ -4,7 +4,7 @@ import { Container, Hidden } from "./buttonLarge.style";
 import { ButtonLargeProps } from "./buttonLarge.types";
 
 export const ButtonLarge: React.FC<ButtonLargeProps> = (Props) => {
-    const { title, iconPosition, variation, icon, outline } = Props;
+    const { title, iconPosition, variation } = Props;
     const contentNone = (title);
     const contentRight = (
         <>
@@ -46,8 +46,6 @@ export const ButtonLarge: React.FC<ButtonLargeProps> = (Props) => {
             { iconPosition === 'right' && contentRight }
             { iconPosition === 'centerLeft' && contentCenterLeft }
             { iconPosition === 'centerRight' && contentCenterRight }
-
-            <BagIcon />
         </Container>
     )
 }

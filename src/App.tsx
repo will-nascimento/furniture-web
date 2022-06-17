@@ -7,11 +7,12 @@ const App: React.FC = () => (
     <div style={{height:10}}/>
     <ButtonLarge variation='primary' iconPosition='left' title='active button'/>
     <div style={{height:10}}/>
-    <ButtonLarge variation='ghost' outline iconPosition='none' title='active button'  />
+    <ButtonLarge variation='primary' outline iconPosition='right' title='active button'  />
     <div style={{height:10}}/>
-    <ButtonLarge variation='ghost' iconPosition='none' title='active button'/>
+    <ButtonLarge variation='primary' iconPosition='centerLeft' title='active button'/>
     <div style={{height:10}}/>
-    <div style={{width:100, height:100, backgroundColor:'black'}}/>
+    <ButtonLarge variation='primary' iconPosition='centerRight' title='active button'/>
+    <div style={{height:10}}/>
     </>
 );
 
