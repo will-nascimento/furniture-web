@@ -1,5 +1,7 @@
 import React from 'react';
+import HeartIcon from './assets/icons/heart';
 import { ButtonLarge } from './components/ButtonLarge/ButtonLarge.component';
+import colors from './styles/colors';
 
 const App: React.FC = () => (
     <>
@@ -11,7 +13,7 @@ const App: React.FC = () => (
     <div style={{height:10}}/>
     <ButtonLarge variation='primary' iconPosition='centerLeft' title='active button'/>
     <div style={{height:10}}/>
-    <ButtonLarge variation='primary' iconPosition='centerRight' title='active button'/>
+    <ButtonLarge variation='primary' icon={<HeartIcon color='#aa4522'/>} iconPosition='centerRight' title='active button'/>
     <div style={{height:10}}/>
     </>
 );
