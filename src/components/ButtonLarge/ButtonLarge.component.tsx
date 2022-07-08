@@ -1,16 +1,20 @@
 import React from "react";
 import BagIcon from "../../assets/icons/bag";
+import Calendar from "../../assets/icons/calendar";
 import { Body1medium } from "../../styles/general.styles";
 import { Container, Hidden } from "./buttonLarge.style";
 import { ButtonLargeProps } from "./buttonLarge.types";
 
 export const ButtonLarge: React.FC<ButtonLargeProps> = (Props) => {
     const { title, iconPosition, variation, icon } = Props;
-    const contentIcon = (icon? icon: <BagIcon />);
+
+    const contentIcon = (icon? icon: <BagIcon color='#FFF' />);
+
     const contentNone = ( 
-        <Body1medium fontWeight={600}> 
+        <Body1medium fontWeight={600}>
         {title}
-        </Body1medium>);
+        </Body1medium>
+    );
     const contentRight = (
         <>
             <Hidden />
@@ -29,10 +33,11 @@ export const ButtonLarge: React.FC<ButtonLargeProps> = (Props) => {
             <Hidden />
         </>
     );
+    console.table(title);
     const contentCenterLeft = (
         <>
             {icon? icon:<BagIcon />}
-            <Body1medium fontWeight={600} marginLeft={8 }> 
+            <Body1medium fontWeight={600} marginLeft={8}> 
             {title}
             </Body1medium>
         </>

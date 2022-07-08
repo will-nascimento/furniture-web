@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Calendar from "../../assets/icons/calendar";
 import colors from "../../styles/colors";
 import { ButtonLargeProps } from "./buttonLarge.types";
 
@@ -6,6 +7,7 @@ export const BackgroundColor: Record<ButtonLargeProps['variation'], string> = {
     primary: colors.yellow500,
     secondary: colors.gray100,
     ghost: colors.transparent,
+    outline: colors.white,
 };
 
 export const AlignItems: Record<ButtonLargeProps['iconPosition'], string> = {
@@ -30,7 +32,7 @@ export const Container = styled.button<ButtonLargeProps>`
     justify-content: ${(props) => JustifyContent[props.iconPosition] || 'center'};
     align-items: ${(props) => AlignItems[props.iconPosition] || 'center'} ;
     width: ${props => props.width || 100}%;
-    border: ${props => props.outline ? '2px solid'+ colors.black : 'none'};
+    border: ${props => props.variation = 'outline'};
     padding: 20px 16px;
     border-radius: 8px;
     cursor: pointer;

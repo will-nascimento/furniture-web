@@ -1,11 +1,12 @@
 import React from "react";
 import { generalStyleProps } from "../../types/general.types";
 
+export type VariationType = 'primary' | 'secondary' | 'ghost' | 'outline';
+export type IconPositionType = 'none' | 'left' | 'right' | 'centerLeft' | 'centerRight';
+
 export interface ButtonLargeProps extends generalStyleProps {
-    variation: 'primary' | 'secondary' | 'ghost',
-    icon?: Element | React.ReactNode,
-    iconPosition: 'none' | 'left' | 'right' | 'centerLeft' | 'centerRight',
-    title?: string,
-    border?: string,
-    outline?: boolean,
+    title: string,
+    variation: VariationType,
+    icon?: React.ReactNode,
+    iconPosition: IconPositionType,
 }
