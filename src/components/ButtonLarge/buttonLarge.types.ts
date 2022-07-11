@@ -9,4 +9,5 @@ export interface ButtonLargeProps extends generalStyleProps {
     variation: VariationType,
     icon?: React.ReactNode,
     iconPosition: IconPositionType,
+    disabled?: boolean,
 }
